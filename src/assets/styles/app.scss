@@ -1,0 +1,13 @@
+@import"variable.scss";
+@import"sign-in.scss";
+@import"header.scss";
+.container-fluid{
+  width:100%;
+  display: flex;
+}
+.container{
+width: 90%;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+}

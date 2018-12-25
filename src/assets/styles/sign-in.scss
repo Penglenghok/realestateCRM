@@ -1,0 +1,52 @@
+.container-fluid{
+  .blue{
+  width:50%;
+    background-color:$signincolor;
+    height: 100vh;
+    position: relative;
+    .img{
+      background-image: url('../src/assets/logo.svg');
+      background-repeat: no-repeat;
+      position:absolute;
+      bottom: 0;
+      right: 0;
+      width: 700px;
+     height: 600px;
+     background-size: cover;
+    }
+
+  }
+  .white{
+    flex: 1;
+    background-color:$white;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+.signin{
+  form{
+    display: flex;
+    flex-direction: column;
+    .input{
+      width: 300px;
+      margin-top: 24px;
+      .mat-form-field-wrapper{
+        padding-bottom: 0;
+      }
+
+    }
+    .mat-raised-button{
+
+      background-color: $signincolor;
+      color: $white;
+      margin-top: 24px;
+      box-shadow: none;
+      height: 60px;
+      border-radius: 30px;
+    }
+  }
+}
+
+  }
+}

@@ -1,0 +1,22 @@
+<div class="container-fluid">
+<div class="blue">
+  <div class="img"></div>
+</div>
+<div class="white">
+  <div class="signin">
+    <form [formGroup]="form">
+      <h2>9BASE Agent Portal</h2>
+      <h4 style="color: red">{{error}}</h4>
+      <mat-form-field appearance="outline" class="input">
+          <mat-label>Username</mat-label>
+          <input matInput formControlName="email">
+        </mat-form-field>
+          <mat-form-field appearance="outline" class="input">
+              <mat-label>Password</mat-label>
+              <input matInput type="password" formControlName="password">
+            </mat-form-field>
+            <button mat-raised-button (click)="_onSignIn(form.value)">Sign In</button>
+    </form>
+  </div>
+</div>
+</div>
