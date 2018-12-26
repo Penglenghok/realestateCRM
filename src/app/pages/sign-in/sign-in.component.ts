@@ -29,13 +29,11 @@ export class SignInComponent implements OnInit {
   _onSignIn(f:any){
     if(this.form.valid){
       this.form.disable();
-      const {email,password}=f;
-      this.auth.login(email,password).then(()=>{
+      this.auth.login(f.email,f.password).then(()=>{
         this.router.navigate(['/app']);
       }).catch(error=>{
         this.error="*Invalid Username or Password";
         this.form.enable();
-        this.form.reset();
       })
     }
   }

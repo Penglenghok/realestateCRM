@@ -1,4 +1,9 @@
-
-<app-header></app-header>
-<app-side-bar></app-side-bar>
-<router-outlet></router-outlet>
+<app-header (navToggle)="mainNav.toggle()"></app-header>
+<mat-sidenav-container>
+  <mat-sidenav #mainNav mode="side" opened="false" class="sidenav">
+    <app-side-bar></app-side-bar>
+  </mat-sidenav>
+  <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+</mat-sidenav-container>

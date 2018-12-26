@@ -26,6 +26,10 @@ import { MobxAngularModule } from 'mobx-angular';
 
 import "firebase/firestore";
 import * as firebase from 'firebase/app';
+import { ClientRegisterComponent } from './pages/client-register/client-register.component';
+import { ProjectComponent } from './pages/project/project.component';
+import { CondoComponent } from './pages/condo/condo.component';
+import { LandedhouseComponent } from './pages/landedhouse/landedhouse.component';
 firebase.initializeApp(environment.firebase);
 const fdb = firebase.firestore();
 fdb.settings({ timestampsInSnapshots: true });
@@ -41,7 +45,11 @@ fdb.settings({ timestampsInSnapshots: true });
     PrimaryButtonComponent,
     SpinnerComponent,
     LoaderPlaceholderComponent,
-    SignInComponent
+    SignInComponent,
+    ClientRegisterComponent,
+    ProjectComponent,
+    CondoComponent,
+    LandedhouseComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,7 +58,7 @@ fdb.settings({ timestampsInSnapshots: true });
     FormsModule,
     ReactiveFormsModule,
     MaterialModule,
-    AngularFireModule.initializeApp(environment.firebase, 'my-app-name'), // imports firebase/app needed for everything
+    AngularFireModule.initializeApp(environment.firebase), // imports firebase/app needed for everything
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
     AngularFireStorageModule, // imports firebase/storage only needed for storage features
