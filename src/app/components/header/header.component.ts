@@ -1,5 +1,5 @@
+import { Auth } from 'src/app/store/auth.store';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { AuthService } from '../../auth/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +8,7 @@ import { AuthService } from '../../auth/auth.service';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(public auth: AuthService) { }
+  constructor(public auth: Auth) { }
   @Output() navToggle = new EventEmitter<boolean>();
 
   ngOnInit() {
@@ -17,3 +17,4 @@ export class HeaderComponent implements OnInit {
     this.navToggle.emit(true);
   }
 }
+

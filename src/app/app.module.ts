@@ -26,6 +26,7 @@ import { MobxAngularModule } from 'mobx-angular';
 
 import "firebase/firestore";
 import * as firebase from 'firebase/app';
+import { APP_AUTH } from './auth/auth';
 import { ClientRegisterComponent } from './pages/client-register/client-register.component';
 import { ProjectComponent } from './pages/project/project.component';
 import { CondoComponent } from './pages/condo/condo.component';
@@ -64,7 +65,7 @@ fdb.settings({ timestampsInSnapshots: true });
     AngularFireStorageModule, // imports firebase/storage only needed for storage features
     MobxAngularModule
   ],
-  providers: [APP_SERVICES,APP_STORES],
+  providers: [APP_SERVICES,APP_STORES,APP_AUTH],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
