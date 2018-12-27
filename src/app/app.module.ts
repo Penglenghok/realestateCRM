@@ -26,6 +26,7 @@ import { MobxAngularModule } from 'mobx-angular';
 
 import "firebase/firestore";
 import * as firebase from 'firebase/app';
+import { APP_AUTH } from './auth/auth';
 firebase.initializeApp(environment.firebase);
 const fdb = firebase.firestore();
 fdb.settings({ timestampsInSnapshots: true });
@@ -50,13 +51,13 @@ fdb.settings({ timestampsInSnapshots: true });
     FormsModule,
     ReactiveFormsModule,
     MaterialModule,
-    AngularFireModule.initializeApp(environment.firebase, 'my-app-name'), // imports firebase/app needed for everything
+    AngularFireModule.initializeApp(environment.firebase), // imports firebase/app needed for everything
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
     AngularFireStorageModule, // imports firebase/storage only needed for storage features
     MobxAngularModule
   ],
-  providers: [APP_SERVICES,APP_STORES],
+  providers: [APP_SERVICES,APP_STORES,APP_AUTH],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
