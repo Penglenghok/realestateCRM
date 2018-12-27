@@ -1,0 +1,17 @@
+.registerform{
+    border-radius: 8px;
+    padding: 25px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 5px 20px -1px rgba(0,0,0,0.5);
+    mat-form-field{
+        padding: 8px;
+    }
+    .row{
+        mat-form-field{
+            width: 250px;
+        }
+    }
+
+}

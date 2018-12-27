@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
 import { Auth } from 'src/app/store/auth.store';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { AuthService } from '../../auth/auth.service';
+import { SideBarComponent } from '../side-bar/side-bar.component';
 
 @Component({
   selector: 'app-header',
@@ -12,5 +14,9 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  @Output() navToggle = new EventEmitter<boolean>();
+  navOpen() {
+    this.navToggle.emit(true);
+  }
 }
+

@@ -1,0 +1,60 @@
+<div class="clientcontainer">
+  <h1>Condo Information</h1>
+  <mat-horizontal-stepper labelPosition="bottom" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Condo Information</ng-template>
+           <div class="row">
+            <mat-form-field>
+              <input matInput placeholder="Size" formControlName="size" required>
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="Unit Type" formControlName="unittype" required>
+            </mat-form-field>
+           </div>
+             <div class="row">
+              <mat-form-field>
+                <input matInput placeholder="No Floor" formControlName="nofloor" required>
+              </mat-form-field>
+              <mat-form-field>
+                <input matInput placeholder="LOT" formControlName="lot" required>
+            </mat-form-field>
+             </div>
+            <div>
+                <button mat-raised-button color="primary" matStepperNext>Next</button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+        <form [formGroup]="secondFormGroup">
+            <ng-template matStepLabel>Fill out your address</ng-template>
+           <div class="row">
+            <mat-form-field>
+              <input matInput placeholder="Budget" formControlName="budget" required>
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="Area / Location" formControlName="location" required>
+            </mat-form-field>
+           </div>
+             <div class="row">
+              <mat-form-field>
+                <input matInput placeholder="Facility" formControlName="facility" required>
+              </mat-form-field>
+              <mat-form-field>
+                <input matInput placeholder="Purpose" formControlName="purpose" required>
+              </mat-form-field>
+             </div>
+
+                <mat-form-field>
+                  <input matInput placeholder="Partaing" formControlName="partaing" required>
+              </mat-form-field>
+
+            <div class="row">
+              <button mat-raised-button color="primary" matStepperPrevious>Back</button>
+              <button mat-raised-button color="primary" (click)="stepper.reset()">Reset</button>
+          </div>
+        </form>
+    </mat-step>
+  </mat-horizontal-stepper>
+  
+</div>

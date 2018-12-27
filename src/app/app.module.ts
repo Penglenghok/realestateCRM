@@ -27,6 +27,10 @@ import { MobxAngularModule } from 'mobx-angular';
 import "firebase/firestore";
 import * as firebase from 'firebase/app';
 import { APP_AUTH } from './auth/auth';
+import { ClientRegisterComponent } from './pages/client-register/client-register.component';
+import { ProjectComponent } from './pages/project/project.component';
+import { CondoComponent } from './pages/condo/condo.component';
+import { LandedhouseComponent } from './pages/landedhouse/landedhouse.component';
 firebase.initializeApp(environment.firebase);
 const fdb = firebase.firestore();
 fdb.settings({ timestampsInSnapshots: true });
@@ -42,7 +46,11 @@ fdb.settings({ timestampsInSnapshots: true });
     PrimaryButtonComponent,
     SpinnerComponent,
     LoaderPlaceholderComponent,
-    SignInComponent
+    SignInComponent,
+    ClientRegisterComponent,
+    ProjectComponent,
+    CondoComponent,
+    LandedhouseComponent,
   ],
   imports: [
     BrowserModule,
