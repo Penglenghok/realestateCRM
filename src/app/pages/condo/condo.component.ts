@@ -20,7 +20,7 @@ export class CondoComponent implements OnInit {
       unittype: [null],
       nofloor: [null],
       lot: [null],
-      projecttype: projecttype.condo
+      projecttype: projecttype[0]
     });
     this.secondFormGroup = this.fb.group({
       budget: [null],

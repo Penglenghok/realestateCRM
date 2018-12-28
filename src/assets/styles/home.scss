@@ -1,3 +1,185 @@
+
+.search-engine {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    background-position: center center;
+    background-repeat: repeat;
+    background-size: 100%;
+    padding: 64px $padding;
+    position: relative;
+    font-family: "Google Sans", sans-serif;
+    color: $cash;
+    .profile-header {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding: $padding $padding 0;
+      z-index: 1;
+      h3 {
+        font-size: 19px;
+        margin-bottom: 12px;
+        color: rgba(255, 255, 255, 0.8);
+        flex: 1;
+      }
+      &.col {
+        flex-direction: column;
+        padding: 0;
+      }
+      .group-buttons {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        position: relative;
+        button.active:after {
+          bottom: -91%;
+          left: 50%;
+          border: solid transparent;
+          content: " ";
+          height: 0;
+          width: 0;
+          position: absolute;
+          pointer-events: none;
+          border-color: rgba(255, 255, 255, 0);
+          border-bottom-color: #fff;
+          border-width: 12px;
+          margin-left: -12px;
+        }
+      }
+      .group-mat-button {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 95px;
+        width: 100%;
+        .text-group {
+          font-size: 13px;
+          font-weight: 500;
+          margin-top: 8px;
+        }
+        .mat-button-wrapper {
+          padding: 12px 0;
+        }
+        .mat-icon {
+          width: 36px;
+          height: 36px;
+          font-size: 34px;
+        }
+        .mat-fab {
+          box-shadow: none;
+          background: $profileAction;
+          &.active {
+            background: #fff;
+            color: $profile;
+          }
+        }
+      }
+      .header-actions {
+        width: 220px;
+        .mat-icon-button {
+          color: #fff;
+        }
+      }
+      h4 {
+        flex: 1;
+        text-transform: capitalize;
+        font-size: 32px;
+        font-weight: 800;
+        text-align: center;
+        color: #fff;
+      }
+    }
+    &.bg-b {
+      background-color: $profile;
+      h2 {
+        color: #fff;
+      }
+    }
+    &.search-full {
+      padding: 0;
+    }
+    .search-nav {
+      display: flex;
+      flex-direction: row;
+      height: 54px;
+      overflow: hidden;
+      background: #fff;
+      min-height: 54px;
+      margin: -8px 0 24px;
+      max-width: 816px;
+      width: 100%;
+      transition: box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1);
+      align-items: center;
+      position: relative;
+      box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2);
+      &:hover {
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+      }
+      &.active {
+        box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.08);
+        .mat-icon {
+          color: $cash;
+        }
+        &:hover {
+          box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2),
+            0 0 0 1px rgba(0, 0, 0, 0.08);
+        }
+      }
+      .mat-icon-button {
+        position: absolute;
+        right: 10px;
+      }
+      .mat-icon {
+        margin-right: 8px;
+      }
+      input[type="text"] {
+        border: none;
+        flex: 1;
+        color: rgba(0, 0, 0, 0.54);
+        font-size: 22px;
+        font-weight: 300;
+        height: 100%;
+        padding-left: 160px;
+        &.mat-input-focus {
+          color: #333;
+        }
+      }
+      .mat-icon {
+        color: rgba(0, 0, 0, 0.54);
+        font-size: 28px;
+        transition: color 0.2s;
+      }
+    }
+  }
+  .enroll-filter {
+    width: 144px;
+    margin-right: 16px;
+    border-right: 1px solid #dedede;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    position: absolute;
+    .mat-select {
+      border: none;
+      font-size: 16px;
+      font-weight: 300;
+      font-family: "Google Sans", roboto, sans-serif;
+    }
+    .mat-select-value {
+      text-align: center;
+      color: rgba(0, 0, 0, 0.54);
+    }
+  }
+  
+
 .task-content {
     justify-content: center;
     align-items: center;
