@@ -1,9 +1,9 @@
-<ng-container >
-</ng-container>
-<div class="clientcontainer" *mobxAutorun>
-  <h1>{{store?.client?.displayname}}</h1>
-<mat-radio-group>
-  <mat-radio-button value="1">Primary</mat-radio-button>
-  <mat-radio-button value="2">Secondary</mat-radio-button>
-</mat-radio-group>
+<div class="clientcontainer" *ngIf="!store.loading">
+  <form [formGroup]="form" *mobxAutorun>
+    <h1>{{store?.client?.displayname}}</h1>
+    <mat-radio-group (change)="_onChanged($event)" formControlName="marketType">
+      <mat-radio-button *ngFor="let item of markets" [value]="item">{{item?.text}}</mat-radio-button>
+    </mat-radio-group>
+  </form>
+  <router-outlet></router-outlet>
 </div>

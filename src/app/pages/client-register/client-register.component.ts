@@ -18,7 +18,6 @@ export class ClientRegisterComponent implements OnInit {
     private router:Router,
     public register:Client,
     private snackBar: MatSnackBar) {}
-
   ngOnInit() {
     this._buildform();
   }

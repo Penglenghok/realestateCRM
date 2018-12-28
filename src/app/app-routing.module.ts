@@ -9,6 +9,8 @@ import { ClientRegisterComponent } from './pages/client-register/client-register
 import { CondoComponent } from './pages/condo/condo.component';
 import { LandedhouseComponent } from './pages/landedhouse/landedhouse.component';
 import { CasesComponent } from './pages/cases/cases.component';
+import { PrimaryComponent } from './components/primary/primary.component';
+import { SecondaryComponent } from './components/secondary/secondary.component';
 
 const routes: Routes = [
   {
@@ -20,12 +22,18 @@ const routes: Routes = [
     path: "",
     component: LayoutComponent,
     canActivate: [AuthGuard],
-    children:[
-      {path:"",component:HomeComponent},
-      {path:'client-register',component:ClientRegisterComponent},
-      {path:'cases/:id',component:CasesComponent},
-      {path:'condo',component:CondoComponent},
-      {path:'landedhouse',component:LandedhouseComponent}
+    children: [
+      { path: "", component: HomeComponent },
+      { path: 'client-register', component: ClientRegisterComponent },
+      {
+        path: 'cases/:id', component: CasesComponent,
+        children: [
+          { path: 'primary', component: PrimaryComponent },
+          { path: 'secondary', component: SecondaryComponent }
+        ]
+      },
+      { path: 'condo', component: CondoComponent },
+      { path: 'landedhouse', component: LandedhouseComponent }
     ]
   }
 ];
@@ -35,4 +43,4 @@ const routes: Routes = [
   providers: [AuthGuard],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
