@@ -31,6 +31,7 @@ import { ClientRegisterComponent } from './pages/client-register/client-register
 import { ProjectComponent } from './pages/project/project.component';
 import { CondoComponent } from './pages/condo/condo.component';
 import { LandedhouseComponent } from './pages/landedhouse/landedhouse.component';
+import { CasesComponent } from './pages/cases/cases.component';
 firebase.initializeApp(environment.firebase);
 const fdb = firebase.firestore();
 fdb.settings({ timestampsInSnapshots: true });
@@ -51,6 +52,8 @@ fdb.settings({ timestampsInSnapshots: true });
     ProjectComponent,
     CondoComponent,
     LandedhouseComponent,
+
+    CasesComponent,
   ],
   imports: [
     BrowserModule,

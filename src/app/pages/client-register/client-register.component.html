@@ -22,8 +22,9 @@
     <mat-form-field>
       <textarea matInput matTextareaAutosize matAutosizeMinRows=3 matAutosizeMaxRows=5 placeholder="Spacial Note" formControlName="spacialnote"></textarea>
     </mat-form-field>
-    <button mat-raised-button color="primary" (click)="_save(form.value)">Save</button>
+    <button mat-raised-button color="primary" (click)="_save(form.value,true)">Save</button>
+    <button mat-raised-button color="primary" (click)="_save(form.value,false)">Save & Continue</button>
   </div>
-  
+
 </form>
 </div>
