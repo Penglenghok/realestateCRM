@@ -1,0 +1,30 @@
+<div class="clientcontainer">
+  <h1>Client Register</h1>
+  <form action="" [formGroup]="form">
+  <div class="registerform">
+    <div class="row">
+      <mat-form-field> <input matInput placeholder="Name" formControlName="name"/> </mat-form-field>
+      <mat-form-field> <input matInput placeholder="Display Name" formControlName="displayname"/> </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field> <input matInput placeholder="Age" type="number" formControlName="age"/> </mat-form-field>
+      <mat-form-field> <input matInput placeholder="Nationality" formControlName="nationality"/> </mat-form-field>
+    </div>
+    <div class="row">
+            <mat-form-field> <input matInput placeholder="Email" type="email" formControlName="email"/> </mat-form-field>
+            <mat-form-field> <input matInput placeholder="Career" formControlName="career"/> </mat-form-field>
+          </div>
+    <mat-form-field> <input matInput placeholder="Social Media" formControlName="socialmedia"/> </mat-form-field>
+    <div class="row">
+      <mat-form-field> <input matInput placeholder="Telphone" type="tel" formControlName="telphone"/> </mat-form-field>
+      <mat-form-field> <input matInput placeholder="Referral" formControlName="referral"/> </mat-form-field>
+    </div>
+    <mat-form-field>
+      <textarea matInput matTextareaAutosize matAutosizeMinRows=3 matAutosizeMaxRows=5 placeholder="Spacial Note" formControlName="spacialnote"></textarea>
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="_save(form.value,true)">Save</button>
+    <button mat-raised-button color="primary" (click)="_save(form.value,false)">Save & Continue</button>
+  </div>
+
+</form>
+</div>

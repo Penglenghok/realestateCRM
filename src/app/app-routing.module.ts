@@ -8,6 +8,7 @@ import { AuthGuard } from './auth/auth.guard';
 import { ClientRegisterComponent } from './pages/client-register/client-register.component';
 import { CondoComponent } from './pages/condo/condo.component';
 import { LandedhouseComponent } from './pages/landedhouse/landedhouse.component';
+import { CustomerComponent } from './pages/customer/customer.component';
 
 const routes: Routes = [
   {
@@ -24,7 +25,8 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     children:[
       {path:"",component:HomeComponent},
-      {path:'register',component:ClientRegisterComponent},
+      {path:'customer',component:CustomerComponent},
+      {path:'client-register/:id',component:ClientRegisterComponent},
       {path:'condo',component:CondoComponent},
       {path:'landedhouse',component:LandedhouseComponent}
     ]

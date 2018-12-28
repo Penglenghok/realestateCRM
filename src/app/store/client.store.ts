@@ -7,8 +7,17 @@ import { ClientKey } from "../interface/client";
 export class Client {
   @observable public data;
   @observable loading = false;
+  @observable client=null;
 
   constructor(private ds: DataService) {}
+
+  @action
+  fetchClient(key){
+    this.ds.registerRef().doc(key).valueChanges().subscribe(doc=>{
+      console.log(doc);
+      this.client=doc;
+    })
+  }
 
   @action
   fetchData(callback) {
