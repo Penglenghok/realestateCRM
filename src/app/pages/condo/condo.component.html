@@ -1,6 +1,5 @@
 <div class="clientcontainer">
-  <h1>Condo Information</h1>
-  <mat-horizontal-stepper labelPosition="bottom" #stepper>
+  <mat-horizontal-stepper labelPosition="bottom" #stepper [linear]="true">
     <mat-step [stepControl]="firstFormGroup">
         <form [formGroup]="firstFormGroup">
             <ng-template matStepLabel>Condo Information</ng-template>

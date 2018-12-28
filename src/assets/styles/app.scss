@@ -3,6 +3,8 @@
 @import"header.scss";
 @import"client-reigister.scss";
 @import'condo.scss';
+@import'home.scss';
+
 .container-fluid{
   width:100%;
   display: flex;
@@ -19,7 +21,7 @@ body{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #f2f2f2;
+  // background-color: #f2f2f2;
   height: calc(100vh - 72px);
   h1 {
       margin-bottom: 25px;
@@ -27,4 +29,11 @@ body{
 }
 .row{
   display: flex;
+}
+.content{
+  display: flex;
+  height: calc(100vh - 72px);
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }

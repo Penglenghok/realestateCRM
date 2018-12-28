@@ -10,8 +10,8 @@ import { Observable } from 'rxjs/Observable';
   providedIn: 'root'
 })
 export class AuthGuard implements CanActivate {
-  constructor(private afAuth:AngularFireAuth,
-    private router:Router){
+  constructor(private afAuth: AngularFireAuth,
+    private router: Router) {
 
   }
   canActivate(
@@ -21,8 +21,8 @@ export class AuthGuard implements CanActivate {
         if (loggedIn) {
           return true;
         }
-        this.router.navigate([''], { queryParams: { returnUrl: state.url } });
+        this.router.navigate(['/signin'], { queryParams: { returnUrl: state.url } });
         return false;
-      })
+      });
   }
 }

@@ -30,7 +30,7 @@ export class SignInComponent implements OnInit {
     if(this.form.valid){
       this.form.disable();
       this.auth.login(f.email,f.password).then(()=>{
-        this.router.navigate(['/app']);
+        this.router.navigate(['/']);
       }).catch(error=>{
         this.error="*Invalid Username or Password";
         this.form.enable();

@@ -8,11 +8,11 @@ import { AuthGuard } from './auth/auth.guard';
 import { ClientRegisterComponent } from './pages/client-register/client-register.component';
 import { CondoComponent } from './pages/condo/condo.component';
 import { LandedhouseComponent } from './pages/landedhouse/landedhouse.component';
-import { CustomerComponent } from './pages/customer/customer.component';
+import { CasesComponent } from './pages/cases/cases.component';
 
 const routes: Routes = [
   {
-    path: "",
+    path: "signin",
     component: AuthLayoutComponent,
     children: [
       { path: "", component: SignInComponent }
@@ -20,13 +20,13 @@ const routes: Routes = [
   },
   {
 
-    path:"app",
+    path:"",
     component:LayoutComponent,
     canActivate: [AuthGuard],
     children:[
       {path:"",component:HomeComponent},
-      {path:'customer',component:CustomerComponent},
-      {path:'client-register/:id',component:ClientRegisterComponent},
+      {path:'client-register',component:ClientRegisterComponent},
+      {path:'cases/:id',component:CasesComponent},
       {path:'condo',component:CondoComponent},
       {path:'landedhouse',component:LandedhouseComponent}
     ]
