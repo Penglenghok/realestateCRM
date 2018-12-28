@@ -17,4 +17,3 @@ export class HeaderComponent implements OnInit {
     this.navToggle.emit(true);
   }
 }
-

@@ -11,7 +11,7 @@ import { LandedhouseComponent } from './pages/landedhouse/landedhouse.component'
 
 const routes: Routes = [
   {
-    path: "",
+    path: "signin",
     component: AuthLayoutComponent,
     children: [
       { path: "", component: SignInComponent }
@@ -19,7 +19,7 @@ const routes: Routes = [
   },
   {
 
-    path:"app",
+    path:"",
     component:LayoutComponent,
     canActivate: [AuthGuard],
     children:[

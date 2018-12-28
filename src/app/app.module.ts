@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {FormsModule,ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MaterialModule } from './modules/material.module';
 import { LayoutComponent } from './shared/layout/layout.component';
 import { AuthLayoutComponent } from './shared/auth-layout/auth-layout.component';
@@ -24,7 +24,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 import { MobxAngularModule } from 'mobx-angular';
 
-import "firebase/firestore";
+import 'firebase/firestore';
 import * as firebase from 'firebase/app';
 import { APP_AUTH } from './auth/auth';
 import { ClientRegisterComponent } from './pages/client-register/client-register.component';
@@ -65,7 +65,7 @@ fdb.settings({ timestampsInSnapshots: true });
     AngularFireStorageModule, // imports firebase/storage only needed for storage features
     MobxAngularModule
   ],
-  providers: [APP_SERVICES,APP_STORES,APP_AUTH],
+  providers: [APP_SERVICES, APP_STORES, APP_AUTH],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

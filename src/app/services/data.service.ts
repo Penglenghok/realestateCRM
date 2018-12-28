@@ -5,12 +5,12 @@ import { AngularFirestore } from '@angular/fire/firestore';
 })
 export class DataService {
 
-  constructor(private db:AngularFirestore) { }
+  constructor(private db: AngularFirestore) { }
 
-  registerRef(){
+  registerRef() {
     return this.db.collection('register')
   }
-  userRef(uid){
+  userRef(uid) {
     return this.db.collection('users').doc<any>(uid);
   }
 }
